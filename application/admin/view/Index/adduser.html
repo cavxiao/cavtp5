@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>添加用户</title>
+</head>
+<body>
+
+<div style="">
+	<form method="post" action="{:url('adduser')}">
+		name:<input type="text" name="name">
+		password:<input type="text" name="password">
+		group： <select name="group">
+					{volist name="group" id="v"}
+						<option value="{$v.id}">{$v.title}</option>
+					{/volist}
+				</select>
+
+				<button type="submit">submit</button>
+	</form>
+</div>
+
+</body>
+</html>
